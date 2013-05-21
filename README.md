@@ -3,6 +3,8 @@
 
 A version of `el.querySelector{All}` that also matches `el` itself.
 
+[![build status](https://secure.travis-ci.org/juliangruber/queryselector.png)](http://travis-ci.org/juliangruber/queryselector)
+
 ## Usage
 
 Create a `<div>` and a `<div>` inside that and match both with the selector
