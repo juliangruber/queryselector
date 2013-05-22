@@ -13,12 +13,15 @@ function queryAll (el, selector) {
 
 function select (el, selector, all) {
   var wrap = map[el.tagName.toLowerCase()] || map._default;
+  var depth = wrap.depth;
 
-  var div = document.createElement('div');
-  var outer = el.outerHTML || new XMLSerializer().serializeToString(el);
-  div.innerHTML = wrap.prefix + outer + el.suffix;
+  var container = document.createElement('div');
+  container.innerHTML = wrap.prefix + wrap.suffix;
 
-  return div[all
+  while (depth--) container = container.childNodes[0];
+  container.appendChild(el);
+
+  return container[all
     ? 'querySelectorAll'
     : 'querySelector'](selector);
 }
