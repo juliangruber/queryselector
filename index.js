@@ -15,7 +15,8 @@ function select (el, selector, all) {
   var wrap = map[el.tagName.toLowerCase()] || map._default;
 
   var div = document.createElement('div');
-  div.innerHTML = wrap.prefix + el.outerHTML + el.suffix;
+  var outer = el.outerHTML || new XMLSerializer().serializeToString(el);
+  div.innerHTML = wrap.prefix + outer + el.suffix;
 
   return div[all
     ? 'querySelectorAll'
