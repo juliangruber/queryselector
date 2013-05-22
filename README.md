@@ -3,7 +3,7 @@
 
 A version of `el.querySelector{All}` that also matches `el` itself.
 
-[![build status](https://secure.travis-ci.org/juliangruber/queryselector.png)](http://travis-ci.org/juliangruber/queryselector)
+[![browser support](https://ci.testling.com/juliangruber/queryselector.png)](https://ci.testling.com/juliangruber/queryselector)
 
 ## Usage
 
