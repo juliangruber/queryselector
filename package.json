@@ -15,8 +15,8 @@
     "wrap-map": "0.0.2"
   },
   "devDependencies": {
-    "tape": "~1.0.2",
-    "tape-run": "0.0.0"
+    "tape": "~4.6.3",
+    "tape-run": "2.1.4"
   },
   "keywords": [
     "queryselector",
